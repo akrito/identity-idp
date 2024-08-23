@@ -61,6 +61,8 @@ setup $(CONFIG): config/application.yml.default ## Runs setup scripts (updates p
 
 check: lint test ## Runs lint tests and spec tests
 
+LC_COLLATE=C
+export LC_COLLATE
 lint: ## Runs all lint tests
 	# Ruby
 	@echo "--- erb-lint ---"
